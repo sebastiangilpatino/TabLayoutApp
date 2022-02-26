@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 
 
 class MainActivity : AppCompatActivity() {
-    private var counter: Int = 0
+    private var counter: Int = 4
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,12 +24,15 @@ class MainActivity : AppCompatActivity() {
         val row = TableRow(this)
         val lp = TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT)
         row.layoutParams = lp
+        //texto input
         val textView1 = TextView(this)
         textView1.text = textAndroidVersion.text.toString()
         val textView2 = TextView(this)
         textView2.text = textAndroidCode.text.toString()
+        //add
         row.addView(textView1)
         row.addView(textView2)
+        //print
         table.addView(row, counter)
         counter++
     }
